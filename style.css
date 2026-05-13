@@ -1,0 +1,274 @@
+body {
+    background: #000;
+    color: white;
+
+    font-family: Poppins, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin: 0;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+
+    font-size: 14px;
+    color: #888;
+}
+
+/* GLOW */
+.bg-glow {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+
+    background: rgba(0,150,255,0.18);
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    filter: blur(120px);
+
+    z-index: 0;
+}
+
+/* CARD */
+.container {
+    background: #111;
+    width: 320px;
+
+    padding: 40px 30px;
+    border-radius: 25px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 1;
+
+    animation: popIn 0.8s ease;
+    box-shadow: 0 0 30px rgba(255,255,255,0.05);
+}
+
+/* TEXT */
+h1 { font-size: 38px; }
+p { color: #888; font-size: 14px; }
+
+/* INPUT + SELECT */
+input, select {
+    width: 100%;
+    padding: 14px;
+
+    margin-top: 15px;
+
+    border-radius: 30px;
+    border: 1px solid #222;
+
+    background: #111;
+    color: white;
+
+    outline: none;
+}
+
+input:focus, select:focus {
+    border: 1px solid white;
+    transform: scale(1.02);
+}
+
+/* BUTTON */
+button {
+    margin-top: 20px;
+    padding: 14px 30px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(135deg, #fff, #ddd);
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* STATUS */
+.status {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* RESULT */
+#resultText {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/* PROGRESS */
+.progress-container {
+    width: 100%;
+    height: 6px;
+
+    background: #222;
+    border-radius: 50px;
+
+    margin-top: 15px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+
+    background: linear-gradient(90deg, #fff, #888);
+}
+
+/* PREVIEW */
+.preview {
+    margin-top: 15px;
+    padding: 12px;
+
+    background: #0f0f0f;
+    border: 1px solid #222;
+
+    border-radius: 12px;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.thumb {
+    width: 50px;
+    height: 50px;
+
+    background: #222;
+    border-radius: 10px;
+}
+
+.info b {
+    font-size: 13px;
+    color: white;
+}
+
+.info p {
+    margin: 0;
+    font-size: 11px;
+    color: #777;
+}
+
+/* MARQUEE */
+.marquee {
+    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee span {
+    display: inline-block;
+    color: #666;
+
+    animation: move 10s linear infinite;
+}
+
+/* LOADING */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.85);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    z-index: 999;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+
+    border: 4px solid #333;
+    border-top: 4px solid white;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+/* ANIMATION */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes move {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* BIAR KERASA APP MOBILE */
+body {
+    overflow: hidden;
+}
+
+/* CARD LEBIH “APP STYLE” */
+.container {
+    width: 340px;
+    max-width: 90%;
+}
+
+/* TRANSISI LEBIH SMOOTH SEMUA ELEMAN */
+* {
+    transition: all 0.25s ease;
+}
+
+/* BUTTON DISABLED STATE */
+button:disabled {
+    opacity: 0.6;
+    transform: scale(0.98);
+}
+
+/* STATUS LEBIH CLEAR */
+.status {
+    letter-spacing: 0.5px;
+}
+
+/* INPUT & SELECT FEEL LEBIH HALUS */
+input, select {
+    font-size: 14px;
+}
+
+/* LOADING TEXT */
+.loading p {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 10px;
+}

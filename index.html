@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Johan Cyber Role</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bg-glow"></div>
+
+    <header>Johan Cyber Role</header>
+
+    <div class="container">
+
+        <h1>Johan Cyber Role</h1>
+        <p>Fast TikTok Downloader</p>
+
+        <input id="tiktokInput" type="text" placeholder="Masukin link dulu...">
+
+        <select id="qualitySelect">
+            <option value="360">360p (Low)</option>
+            <option value="720">720p (HD)</option>
+            <option value="1080">1080p (Full HD)</option>
+        </select>
+
+        <button id="downloadBtn">Download Now</button>
+
+        <p id="resultText"></p>
+        <p id="statusText" class="status">Idle</p>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div id="previewBox" class="preview">
+            <div class="thumb"></div>
+            <div class="info">
+                <b>No video loaded</b>
+                <p>Paste link to preview</p>
+            </div>
+        </div>
+
+        <div class="marquee">
+            <span>FAST — CLEAN — HD QUALITY — NO WATERMARK</span>
+        </div>
+
+    </div>
+
+    <div id="loadingScreen" class="loading">
+        <div class="spinner"></div>
+        <p>Processing download...</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
